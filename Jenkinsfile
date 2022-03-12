@@ -10,7 +10,7 @@ pipeline {
 			}
 			stage('second') {
 				when{
-					${VARIABLE}="True"
+					branch 'production'
 				}
 				steps {
 					script {
