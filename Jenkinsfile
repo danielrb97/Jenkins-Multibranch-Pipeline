@@ -10,7 +10,7 @@ pipeline {
 			}
 			stage('second') {
 				when{
-					$env.VARIABLE="True"
+					expression  $VARIABLE='True'
 				}
 				steps {
 					script {
