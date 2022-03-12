@@ -4,13 +4,13 @@ pipeline {
 			stage('first') {
 				steps {
 					script {
-						env.TEST_VARIABLE='True'
+						env.IS_BOOLEAN=True
 					}
 				}
 			}
 			stage('second') {
 				when{
-					env.TEST_VARIABLE='True'
+					env.IS_BOOLEAN
 				}
 				steps {
 					script {
