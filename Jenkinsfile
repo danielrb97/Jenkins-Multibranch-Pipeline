@@ -3,19 +3,12 @@ pipeline {
 		stages {
 			stage('first') {
 				steps {
-					script {
-						env.VARIABLE="True"
-					}
+					sh 'echo "Step one"'
 				}
 			}
 			stage('second') {
-				when{
-					${VARIABLE}="True"
-				}
 				steps {
-					script {
-						echo ${VARIABLE}
-					}
+					sh 'echo "Step two"'
 				}
 			} 
 
