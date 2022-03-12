@@ -4,13 +4,13 @@ pipeline {
 			stage('first') {
 				steps {
 					script {
-						env.BRANCH_NAME='True'
+						env.TEST_VARIABLE='True'
 					}
 				}
 			}
 			stage('second') {
 				when{
-					BRANCH_NAME 'True'
+					env.TEST_VARIABLE 'True'
 				}
 				steps {
 					script {
