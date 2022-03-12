@@ -4,13 +4,13 @@ pipeline {
 			stage('first') {
 				steps {
 					script {
-						env.IS_BOOLEAN=True
+						env.BRANCH_NAME="True"
 					}
 				}
 			}
 			stage('second') {
 				when{
-					env.IS_BOOLEAN = True
+					branch 'True'
 				}
 				steps {
 					script {
