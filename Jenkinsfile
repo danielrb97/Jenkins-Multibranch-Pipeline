@@ -10,7 +10,7 @@ pipeline {
 			}
 			stage('second') {
 				when{
-					env.IS_BOOLEAN
+					env.IS_BOOLEAN = True
 				}
 				steps {
 					script {
