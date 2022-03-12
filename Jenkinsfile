@@ -10,7 +10,7 @@ pipeline {
 			}
 			stage('second') {
 				when{
-					env.TEST_VARIABLE 'True'
+					env.TEST_VARIABLE='True'
 				}
 				steps {
 					script {
